@@ -104,7 +104,6 @@ public class K_member_management {
             }
         }
 
-
         System.out.println("찾으시는 정보가 없습니다.");
     }
 
