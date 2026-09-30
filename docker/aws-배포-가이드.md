@@ -197,6 +197,11 @@ chmod 600 ~/.ssh/config
 - git clone git@github.com:DongWoonKim/programmers-dev-lect.git
 - 폴더명 변경 : mv ~/programmers-dev-lect ~/app
 - docker-compose.aws.yml
+
+> 참고 : 이 파일과 아래의 deploy.sh 는 이제 레포의 `docker/` 안에 들어있다.
+> clone 하면 그대로 따라오므로 직접 만들 필요는 없고, 아래 내용은 무엇이 왜
+> 들어가는지 읽어보는 용도다. `.env` 만 서버에서 만들면 된다.
+
 ```yaml
 name: msa-aws
 
