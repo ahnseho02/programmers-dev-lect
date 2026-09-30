@@ -1,12 +1,11 @@
 # auth-service 전용 설정
-# 실제 값은 env로 주입
+# 실제 값은 env로 주입 (docker/.env -> docker-compose.aws.yml -> 컨테이너 환경변수)
+# Config Server(native)는 이 파일을 그대로 내려주고, ${}는 auth-service 쪽에서 해석된다.
 spring:
   security:
     oauth2:
       client:
         registration:
           kakao:
-            client-id: ${KAKAO_CLIENT_ID:fb44fad539553103bcb93d798526b34a}
-            client-secret: D9fPyIeIdrpT2ShB5Vaksm0V0nPBmX1u
-        
-      
+            client-id: ${KAKAO_CLIENT_ID:disabled}
+            client-secret: ${KAKAO_CLIENT_SECRET:disabled}

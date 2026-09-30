@@ -46,6 +46,9 @@ services:
       BOARD_SERVICE_URL: http://board-service:8081
       # OAuth 성공 후 브라우저를 돌려보낼 주소 (application.yaml 의 web-service.url)
       WEB_SERVICE_URL: http://${PUBLIC_HOST}
+      # 카카오 로그인 (config-repo/auth-service.yaml 의 ${} 를 채운다)
+      KAKAO_CLIENT_ID: ${KAKAO_CLIENT_ID:-}
+      KAKAO_CLIENT_SECRET: ${KAKAO_CLIENT_SECRET:-}
       # 컨테이너 기본 시간대가 UTC라 화면의 작성일이 9시간 밀려 보인다.
       # JVM이 TZ를 읽어 포맷하므로 여기서 KST로 맞춘다.
       TZ: Asia/Seoul
